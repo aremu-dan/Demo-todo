@@ -1,0 +1,229 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100vw;
+  min-height: 100vh;
+  /* position: relative; */
+  background: darkslategrey;
+  font-family: 'comic san';
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  position: relative;
+  height: 90vh;
+  width: 100vw;
+  background: rgb(23, 41, 41);
+  border-radius: 8px;
+  margin: 5vh auto;
+  padding: 10px 5px;
+  max-width: 412px;
+}
+@media screen and (max-width: 411px) {
+  .App {
+    /* height: 100vh;  */
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+}
+
+#title {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  padding: 0px;
+  color: #ddd;
+  text-align: center;
+  font-family: 'comic sans';
+}
+
+#title h1 {
+  /* background: yellow; */
+  /* margin: 0; */
+  /* padding: 0; */
+}
+
+#todoList {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+}
+
+#todoList .item {
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  background: #999;
+  background: rgb(61, 107, 107);
+  border-left: 5px solid white;
+  padding: 5px 5px 5px 10px;
+  margin: 5px 0px;
+  border-radius: 0px 5px 5px 0px;
+  color: white;
+}
+
+.item .listTitle {
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+.item .listContent {
+  color: #bbb;
+  text-transform: lowercase;
+  font-size: 15px;
+}
+
+.item .close {
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  background: inherit;
+  color: inherit;
+  right: 5px;
+  text-align: center;
+  font-size: 120%;
+  font-weight: bold;
+  z-index: 1;
+  outline: hidden;
+}
+.item .close:active {
+  color: red;
+}
+
+.splashscreen {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: red;
+  z-index: 1000;
+}
+
+.showModalButton {
+  position: absolute;
+  min-width: 40px;
+  min-height: 40px;
+  max-height: 20px;
+  max-width: 20px;
+  border-radius: 50%;
+  right: 10px;
+  bottom: 20px;
+  background: rgba(0, 255, 255, 0.5);
+  font-size: 3rem;
+  padding: 0;
+  z-index: 4;
+}
+.showModalButton:hover {
+  color: darkslategray;
+}
+.showModalButton:active {
+  background: rgba(0, 255, 255, 0.5);
+  color: white;
+  box-shadow: 0px 0px 5px white;
+}
+
+.modal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(1px);
+  /* display: flex; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 50;
+}
+.modal.show {
+  display: flex;
+}
+.backdrop {
+  position: absolute;
+  /* background: green; */
+  height: inherit;
+  width: inherit;
+}
+.card {
+  position: absolute;
+  background: white;
+  height: fit-content;
+  min-height: 20vh;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 15px;
+}
+.card .card-title {
+  text-align: center;
+  color: darkslategrey;
+  font-weight: bold;
+}
+.card .card-body {
+  margin: auto;
+  height: fit-content;
+  width: 100%;
+  margin: 10px auto;
+  z-index: 2;
+}
+.card .card-body button {
+  position: relative;
+  width: 30%;
+  min-width: 150px;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-weight: bold;
+  background: darkslategray;
+}
+.card .card-body button:hover {
+  /* color: darkslategray; */
+}
+.card .card-body button:active {
+  background: rgba(0, 255, 255, 0.5);
+  color: white;
+  box-shadow: 0px 0px 5px white;
+}
+
+button {
+  cursor: pointer;
+  border-width: 0;
+  display: flex;
+  color: white;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+textarea,
+input {
+  width: 100%;
+  min-height: 25px;
+  height: fit-content;
+  margin: 5px auto;
+  border-width: 0px 0px 2px 0px;
+  padding: 0px 5px;
+  color: darkslategray;
+}
+textarea {
+  min-height: 100px;
+  margin-top: 10px;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+  border-color: darkslategray;
+}
